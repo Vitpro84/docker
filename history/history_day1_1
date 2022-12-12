@@ -1,0 +1,134 @@
+    1  poweroff
+    2  sudo service docker status
+    3  cat docker/scripts/install-docker
+    4  sudo usermod -aF docker student
+    5  sudo usermod -aG docker student
+    6  id
+    7  groups
+    8  docker ps
+    9  poweroff -a
+   10  docker ps -a
+   11  docker images
+   12  docker run --help
+   13  docker search getting
+   14  docker search getting --filter=stars=1
+   15  docker search mysql --filter=stars=1
+   16  docker run -d -p 8080:80 --name gst1 docker/getting-started
+   17  docker images
+   18  docker ps
+   19  docker run -d -p 8081:80 docker/getting-started
+   20  docker run -d -p 8082:80 docker/getting-started
+   21  docker ps
+   22  docker run -d -p 8082:80 docker/getting-started
+   23  docker ps
+   24  docker ps -a
+   25  docker rm 8
+   26  docker ps -a
+   27  docker logs gst1
+   28  docker ps -a
+   29  docker logs 3
+   30  docker top 3
+   31  docker ps
+   32  docker ps -q
+   33  docker stop $(docker ps -q)
+   34  docker ps -a
+   35  docker start $(docker ps -qa)
+   36  docker ps -a
+   37  docker ps
+   38  docker rm -f 2 3
+   39  docker ps
+   40  docker pull busybox
+   41  docker images
+   42  docker run -dit --name bbox1 busybox
+   43  docker ps
+   44  docker attach bbox1 
+   45  docker ps
+   46  docker ps -a
+   47  docker start bbox1 
+   48  docker ps -a
+   49  docker attach bbox1 
+   50  docker attach bbox1 --detach-keys 'ctrl-p'
+   51  cd docker
+   52  mkdir app1
+   53  cd app1
+   54  gedit
+   55  cat data1 
+   56  mcedit
+   57  cat data1 
+   58  cat data2
+   59  docker cp data1 bbox1:/app45
+   60  docker exec bbox1 ls
+   61  docker exec bbox1 mkdir app6
+   62  docker exec bbox1 ls
+   63  docker exec bbox1 bash ls
+   64  docker exec bbox1 sh ls
+   65  docker exec bbox1 sh -c ls
+   66  docker run -d busybox
+   67  docker ps -a
+   68  docker run -di busybox
+   69  docker ps -a
+   70  docker attach cf
+   71  docker run -d busybox ping 8.8.8.8
+   72  docker ps
+   73  docker logs bc
+   74  docker ps -a
+   75  docker rm 9
+   76  docker ps -a
+   77  docker exec gst1 ls -la
+   78  docker exec gst1 ls
+   79  docker exec bbox1 ls
+   80  docker commit bbox1 busybox-my
+   81  docker images 
+   82  docker tag 75 busybox-my:1.0
+   83  docker images 
+   84  docker rmi busybox-my:latest 
+   85  docker ps -a
+   86  docker rm -f bc
+   87  docker rm -f bbox1
+   88  docker rm -f bc
+   89  docker ps -a
+   90  docker rmi busybox
+   91  docker images
+   92  docker run -dit --name bbox1 busybox-my:1.0
+   93  docker ps
+   94  docker exec bbox1 ls
+   95  docker images
+   96  docker tag 75 a0z9
+   97  /
+   98  docker tag 75 a0z9 a0z9/bboxmy:1.0
+   99  docker tag 75 a0z9/bboxmy:1.0
+  100  docker images
+  101  docker rmi a0z9:latest 
+  102  docker images
+  103  docker login
+  104  docker push a0z9/bboxmy:1.0 
+  105  mcedit
+  106  cd ..
+  107  git add .
+  108  git commit -m 'dockerfile'
+  109  git config --global user.name a0z9
+  110  git config --global user.email a0z9@rambler.ru
+  111  git commit -m 'dockerfile'
+  112  docker push
+  113  git push
+  114  git pull
+  115  cd
+  116  cd docker
+  117  git pull
+  118  cd app1
+  119  cat dockerfile 
+  120  vim dockerfile 
+  121  docker build -t bboxmy:2.0 .
+  122  docker images
+  123  docker run -dit --name bbox2 bboxmy:2.0
+  124  docker ps
+  125  docker exec bbox2 enc
+  126  docker exec bbox2 env
+  127  docker exec bbox2 ls /
+  128  docker exec bbox2 cat /localdir/data
+  129  docker images
+  130  docker tag bboxmy:2.0 a0z9/bboxmy:2.0
+  131  docker push a0z9/bboxmy:2.0
+  132  cd ..
+  133  mkdir history
+  134  history > history/history_day1_1
