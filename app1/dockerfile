@@ -1,0 +1,13 @@
+FROM busybox
+
+LABEL maintainer="a0z9@rambler.ru"
+
+RUN mkdir /localdir && echo `date` > /localdir/data
+
+RUN data
+
+ENV VERSION 2.0
+WORKDIR /app2
+
+COPY data2 .
+
