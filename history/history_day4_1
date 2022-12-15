@@ -1,0 +1,588 @@
+    1  poweroff
+    2  id
+    3  dockeeeeeer ps
+    4  docker ps -a
+    5  docker stop cf -f
+    6  docker stop cf
+    7  docker rm -f cf
+    8  cd docker/app1
+    9  ls
+   10  docker ps
+   11  docker restart gst1
+   12  docker ps
+   13  docker stop gst1
+   14  sudo service docker restart
+   15  docker
+   16  docker ps
+   17  sudo service docker stop
+   18  sudo service docker start
+   19  docker start gst1
+   20  docker ps
+   21  ls -la tars
+   22  ls -la ../tars
+   23  docker import --help
+   24  docker import ../tars/bbox2.tar bbox2:2.1
+   25  docker images
+   26  cd ../tars/
+   27  c++
+   28  vim hi.c
+   29  c++ hi.c -o hi
+   30  ./hi
+   31  ls -la
+   32  tar -cf hi.tar hi 
+   33  mc
+   34  docker import hi.tar hi:1.0
+   35  docker images
+   36  docker run --rm -d hi:1.0 ./hi
+   37  docker run --rm -i hi:1.0 ./hi
+   38  c++ hi.c --static -o hi2
+   39  ls -la
+   40  ./h2
+   41  ./h
+   42  ./h\\
+   43  ./hu
+   44  ./hi
+   45  ./hi2
+   46  tar -cf hi2.tar hi2
+   47  docker import hi2.tar hi:2.0
+   48  docker run --rm -i hi:2.0 ./hi2
+   49  docker run  -i hi:2.0 ./hi2
+   50  docker ps -a
+   51  docker start bbox2
+   52  docker start bbox1
+   53  docker container prune -f
+   54  docker ps -a
+   55  docker run --rm -i hi:2.0 ./hi2
+   56  ps aux | grep busybox
+   57  docker ps
+   58  id
+   59  sudo groupadd -aG docker stident
+   60  sudo groupadd -aG docker student
+   61  sudo groupmod -aG docker student
+   62  sudo usermod -aG docker student
+   63  id
+   64  groups
+   65  newgrp docker
+   66  sudo service docker status
+   67  cat docker/scripts/install-docker
+   68  sudo usermod -aF docker student
+   69  sudo usermod -aG docker student
+   70  id
+   71  groups
+   72  docker ps
+   73  poweroff -a
+   74  docker ps -a
+   75  docker images
+   76  docker run --help
+   77  docker search getting
+   78  docker search getting --filter=stars=1
+   79  docker search mysql --filter=stars=1
+   80  docker run -d -p 8080:80 --name gst1 docker/getting-started
+   81  docker images
+   82  docker ps
+   83  docker run -d -p 8081:80 docker/getting-started
+   84  docker run -d -p 8082:80 docker/getting-started
+   85  docker ps
+   86  docker run -d -p 8082:80 docker/getting-started
+   87  docker ps
+   88  docker ps -a
+   89  docker rm 8
+   90  docker ps -a
+   91  docker logs gst1
+   92  docker ps -a
+   93  docker logs 3
+   94  docker top 3
+   95  docker ps
+   96  docker ps -q
+   97  docker stop $(docker ps -q)
+   98  docker ps -a
+   99  docker start $(docker ps -qa)
+  100  docker ps -a
+  101  docker ps
+  102  docker rm -f 2 3
+  103  docker ps
+  104  docker pull busybox
+  105  docker images
+  106  docker run -dit --name bbox1 busybox
+  107  docker ps
+  108  docker attach bbox1 
+  109  docker ps
+  110  docker ps -a
+  111  docker start bbox1 
+  112  docker ps -a
+  113  docker attach bbox1 
+  114  docker attach bbox1 --detach-keys 'ctrl-p'
+  115  cd docker
+  116  mkdir app1
+  117  cd app1
+  118  gedit
+  119  cat data1 
+  120  mcedit
+  121  cat data1 
+  122  cat data2
+  123  docker cp data1 bbox1:/app45
+  124  docker exec bbox1 ls
+  125  docker exec bbox1 mkdir app6
+  126  docker exec bbox1 ls
+  127  docker exec bbox1 bash ls
+  128  docker exec bbox1 sh ls
+  129  docker exec bbox1 sh -c ls
+  130  docker run -d busybox
+  131  docker ps -a
+  132  docker run -di busybox
+  133  docker ps -a
+  134  docker attach cf
+  135  docker run -d busybox ping 8.8.8.8
+  136  docker ps
+  137  docker logs bc
+  138  docker ps -a
+  139  docker rm 9
+  140  docker ps -a
+  141  docker exec gst1 ls -la
+  142  docker exec gst1 ls
+  143  docker exec bbox1 ls
+  144  docker commit bbox1 busybox-my
+  145  docker images 
+  146  docker tag 75 busybox-my:1.0
+  147  docker images 
+  148  docker rmi busybox-my:latest 
+  149  docker ps -a
+  150  docker rm -f bc
+  151  docker rm -f bbox1
+  152  docker rm -f bc
+  153  docker ps -a
+  154  docker rmi busybox
+  155  docker images
+  156  docker run -dit --name bbox1 busybox-my:1.0
+  157  docker ps
+  158  docker exec bbox1 ls
+  159  docker images
+  160  docker tag 75 a0z9
+  161  /
+  162  docker tag 75 a0z9 a0z9/bboxmy:1.0
+  163  docker tag 75 a0z9/bboxmy:1.0
+  164  docker images
+  165  docker rmi a0z9:latest 
+  166  docker images
+  167  docker login
+  168  docker push a0z9/bboxmy:1.0 
+  169  mcedit
+  170  cd ..
+  171  git add .
+  172  git commit -m 'dockerfile'
+  173  git config --global user.name a0z9
+  174  git config --global user.email a0z9@rambler.ru
+  175  git commit -m 'dockerfile'
+  176  docker push
+  177  git push
+  178  git pull
+  179  cd
+  180  cd docker
+  181  git pull
+  182  cd app1
+  183  cat dockerfile 
+  184  vim dockerfile 
+  185  docker build -t bboxmy:2.0 .
+  186  docker images
+  187  docker run -dit --name bbox2 bboxmy:2.0
+  188  docker ps
+  189  docker exec bbox2 enc
+  190  docker exec bbox2 env
+  191  docker exec bbox2 ls /
+  192  docker exec bbox2 cat /localdir/data
+  193  docker images
+  194  docker tag bboxmy:2.0 a0z9/bboxmy:2.0
+  195  docker push a0z9/bboxmy:2.0
+  196  cd ..
+  197  mkdir history
+  198  history > history/history_day1_1
+  199  git add .
+  200  git commit -m 'day1 commit'
+  201  git push
+  202  docker image pull nginx:1.22.1
+  203  docker image pull docker.io/library/nginx:1.22.2
+  204  docker image pull docker.io/library/nginx:1.22.0
+  205  docker image pull nginx@sha256:f0d28f2047853cbc10732d6eaa1b57f1f4db9b017679b9fd7966b6a2f9ccc2d1
+  206  docker images
+  207  docker images --digests 
+  208  docker images
+  209  docker ps
+  210  docker export --help
+  211  mkdir tars
+  212  docker export bbox2 -o tars/bbox2.tar
+  213  docker export gst1  -o tars/gst1.tar
+  214  mc
+  215  docker inspect gst1
+  216  docker inspect gst1 --format {{ .Config.Ports }}
+  217  docker inspect gst1 --format {{ .NetworkSettings.Ports }}
+  218  docker inspect gst1 --format {{ .HostConfig.NetworkSettings.Ports }}
+  219  docker inspect --format {{ .HostConfig.NetworkSettings.Ports }} gst1
+  220  docker inspect --format={{ .NetworkSettings.Ports }} gst1
+  221  docker inspect --format="{{ .NetworkSettings.Ports }}" gst1
+  222  su -
+  223  docker images
+  224  docker tag e5b a0z9/gstarted:1.0
+  225  docker images
+  226  docker login
+  227  docker push a0z9/gstarted:1.0
+  228  docker p
+  229  docker ps
+  230  docker update gst1 --restart always 
+  231  docker update bbox2 --restart unless-stopped 
+  232  docker ps
+  233  sudo service docker restart
+  234  docker ps
+  235  docker stop 5 d
+  236  docker stop 55
+  237  docker stop d
+  238  docker ps
+  239  docker update --restart 
+  240  sudo service docker restart
+  241  docker ps -a
+  242  docker inspect bbox1 | less
+  243  docker inspect gst1 | less
+  244  docker inspect gst1 --format "{{ .HostConfig.RestartPolicy.Name }}"
+  245  docker inspect gst1 | grep always
+  246  docker pause gst1 
+  247  docker ps -a
+  248  docker unpause gst1 
+  249  docker ps -a
+  250  docker save bboxmy:2.0 -o tars/bbox2_save.tar
+  251  mc
+  252  cd tars/
+  253  ls -la
+  254  cat 7707b4090767eb588ac412c3c2cae1bb98e14d09b6141c916eb77e901949acbf.json | jq
+  255  ls
+  256  vim Dockerfile
+  257  ./hi2
+  258  docker build -t hi:2.1 .
+  259  docker run --rm -i hi:2.1 ./hi2
+  260  docker create -d --name gst2 -p 8081:80 --restart always  docker/getting-started 
+  261  docker create --name gst2 -p 8081:80 --restart always  docker/getting-started 
+  262  docker ps -a
+  263  docker start gst2
+  264  docker ps -a
+  265  sudo service docker restart
+  266  docker ps -a
+  267  cd ..
+  268  history > history/history_day2_1
+  269  git add .
+  270  git commit -m 'images, tars, save, export'
+  271  git push
+  272  cd tars/
+  273  ls -la
+  274  docker images
+  275  sha256sum 7707b4090767eb588ac412c3c2cae1bb98e14d09b6141c916eb77e901949acbf.json 
+  276  docker images
+  277  cat 7707b4090767eb588ac412c3c2cae1bb98e14d09b6141c916eb77e901949acbf.json | jq
+  278  docker stats
+  279  docker update gst2 -m 25m
+  280  docker update gst2 --memory-swap=off -m 25m
+  281  docker update gst2 --memory-swap=false -m 25m
+  282  docker update gst2 --memory-swap 1m -m 20m
+  283  docker update gst2 --memory-swap 30m -m 20m
+  284  docker stats
+  285  docker update gst2 --cpus 0.5
+  286  docker stats
+  287  docker inspect gst2
+  288  docker update gst2 --cpus 0.5 --MemorySwappiness true
+  289  docker run -d -p 8083:80 --name gst3 --cpus 0.5 --MemorySwappiness=true docker/getting-started
+  290  docker run -d -p 8083:80 --name gst3 --cpus 0.5 --memory-swappiness=true  docker/getting-started
+  291  docker run -d -p 8083:80 --name gst3 --cpus 0.5 --memory-swappiness  docker/getting-started
+  292  docker run -d -p 8083:80 --name gst3 --cpus 0.5 --memory-swappiness 1  docker/getting-started
+  293  docker update gst3 -m 40123123
+  294  docker update gst3 -m 40123123 --memory-swap 40222222
+  295  docker stats
+  296  docker ps
+  297  docker update gst1 -m 20m
+  298  docker update gst1 -m 20m --memory-swap -1
+  299  docker stats
+  300  dd
+  301  docker stats
+  302  docker update bbox3 --cpus 1.2
+  303  docker stats
+  304  docker update bbox3 --cpus 0.3
+  305  docker stats
+  306  git
+  307  git clone https://github.com/a0z9/docker
+  308  cd docker/
+  309  ls -la
+  310  git pull
+  311  cd ..
+  312  mkdir docker-my
+  313  cd docker
+  314  git branch 
+  315  cd ..
+  316  mc
+  317  nano
+  318  vim .bashrc 
+  319  sudo apt update
+  320  ./docker/scripts/install-docker
+  321  docker ps
+  322  sudo usermod -aG docker student
+  323  newgrp docker
+  324  id
+  325  sudo ls -la /var/run/docker.sock
+  326  reboot
+  327  docker ps
+  328  docker update bbox3 --cpus 0.5 
+  329  docker stop bbox3
+  330  docker ps
+  331  cd docker
+  332  cd scripts/
+  333  ls
+  334  node
+  335  less wapp.js 
+  336  sudo apt install nodejs
+  337  sudo apt update
+  338  sudo apt install nodejs
+  339  export DOCK_HOST=$(uname -n)
+  340  echo $DOCK_HOST 
+  341  node wapp.js 
+  342  vim wapp.js 
+  343  cd ..
+  344  mkdir app2
+  345  cp scripts/wapp.js app2/
+  346  cd app2
+  347  ls -la
+  348  vim dockerfile
+  349  cat dockerfile 
+  350  ls
+  351  docker build -t wapp:1.0 .
+  352* docker 
+  353  docker build -t wapp:1.0 .
+  354  
+  355  docker rm -f wapp1 
+  356  docker run --name wapp1 -p 8090:8080 -d -e DOCK_HOST=$(uname -n)  wapp:1.0 
+  357  docker logs wapp1 
+  358  cp dockerfile dockerfile2 
+  359  vim dockerfile2
+  360  docker build -f dockerfile2 -t wapp:2.0 .
+  361  docker images
+  362  docker run --name wapp2 -p 8091:8080 -d -e DOCK_HOST=$(uname -n)  wapp:2.0 
+  363  docker exec --interactive wapp1 env
+  364  docker exec --interactive wapp2 env
+  365  docker exec --interactive wapp2 ls /
+  366  docker exec --interactive wapp1 ls /
+  367  docker exec --interactive wapp1 du /
+  368  docker exec --interactive wapp1 du -h /
+  369  docker exec --interactive wapp2 du -h /
+  370  docker ps
+  371  docker images
+  372  cat ../app1/dockerfile 
+  373  docker image
+  374  docker images
+  375  docker run --name bbox-vol-test -dit a0z9/bboxmy:2.0 
+  376  docker inspect bbox-vol-test 
+  377  docker exec bbox-vol-test ls /app2
+  378  docker exec bbox-vol-test cat /app2/file1
+  379  docker rm -f bbox-vol-test 
+  380  docker run --name bbox-vol-test -v /app2  -dit a0z9/bboxmy:2.0 
+  381  docker volume ls
+  382  docker inspect bbox-vol-test 
+  383  docker exec bbox-vol-test echo test > /app2
+  384  docker exec bbox-vol-test sh -c 'echo test > /app2/f1'
+  385  docker exec bbox-vol-test sh -c 'echo `date` > /app2/f2'
+  386  docker volume ls
+  387  docker volume inspect 4b082c71f892cdb211511af8a5bc9d0f00c66fa4b335f21ae34366e87457f43f 
+  388  docker rm -f bbox-vol-test 
+  389  docker volume inspect 4b082c71f892cdb211511af8a5bc9d0f00c66fa4b335f21ae34366e87457f43f 
+  390  docker run --name bbox-vol-test -v /app2  -dit a0z9/bboxmy:2.0 
+  391  docker run --name bbox-vol-test2 -v /app2  -dit a0z9/bboxmy:2.0 
+  392  docker ps
+  393  docker exec bbox-vol-test sh -c 'echo test > /app2/f21'
+  394  docker exec bbox-vol-test ls /app2
+  395  docker exec bbox-vol-test2 ls /app2
+  396  cd ../app1
+  397  cp dockerfile dockerfile-vol
+  398  vim dockerfile-vol 
+  399  docker images
+  400  docker build -t bbox:volume -f dockerfile-vol .
+  401  docker images
+  402  docker run --name bbox-vol-test3 -dit bbox:volume 
+  403  docker rm -f bbox-vol-test
+  404  docker rm -f bbox-vol-test2
+  405  docker rm -f bbox-vol-test3
+  406  docker ps
+  407  docker ps -a
+  408  docker rm -f bbox1 bbox2
+  409  docker rm -f bbox1 bbox3
+  410  docker ps -a
+  411  docker run --rm  -dit bbox:volume ls /app2
+  412  docker run --rm  -it bbox:volume ls /app2
+  413  docker run  -dit bbox:volume
+  414  docker rm -f f6 a5 09
+  415  docker run --name bbox1 -v bbox-vol:/app2 -dit busybox
+  416  docker run --name bbox2 -v bbox-vol:/app2 -dit busybox
+  417  docker exec bbox1 ls /app2
+  418  docker exec bbox2 ls /app2
+  419  docker attach bbox2 
+  420  docker exec bbox2 ls /app2
+  421  docker exec bbox1 ls /app2
+  422  docker attach bbox1 
+  423  docker exec bbox1 ls /app2
+  424  docker exec bbox2 ls /app2
+  425  docker run --name bbox3 -v bbox-vol:/app2:ro -dit busybox
+  426  docker exec bbox3 ls /app2
+  427  docker attach  bbox3
+  428  mdir shared
+  429  mkdir shared
+  430  echo 'DATA=1.234' >> shared/service.conf
+  431  echo 'VERSION=0.2' >> shared/service.conf
+  432  cat shared/service.conf 
+  433  docker run --name bbox4 -v /home/student/docker/app1/shared/:/conf -dit busybox
+  434  docker exec bbox4 ls /conf
+  435  docker exec bbox4 cat /conf/service.conf
+  436  docker exec bbox4 sh -c 'echo "DIR=/conf" >> /conf/service.conf'
+  437  cat shared/service.conf 
+  438  docker run --name bbox5 -v /home/student/docker/app1/shared/:/conf:ro -dit busybox
+  439  docker exec bbox5 sh -c 'echo "DIR2=/conf" >> /conf/service.conf'
+  440  docker exec bbox4 sh -c 'echo "DIR2=/conf" >> /conf/service.conf'
+  441  cat shared/service.conf 
+  442  cd ..
+  443  history > history/history_day3_full
+  444  git add .
+  445  git commit -m 'end of day3'
+  446  git push
+  447  docker volume ls
+  448  ip a
+  449  docker ps
+  450  docker exec -i wapp2 ip a
+  451  docker exec -i wapp1 ip a
+  452  docker stop $(docker ps -q)
+  453  ip a
+  454  docker start wapp1 wapp2 
+  455  docker start gst1 gst2 gst3
+  456  docker start bbox1 bbox2 bbox5
+  457  docker exec bbox1 ip a
+  458  docker exec bbox5 ip a
+  459  docker exec bbox5 ping 172.17.0.7
+  460  docker attach bbox1
+  461  docker network ls
+  462  docker network inspect bridge
+  463  docker run -d --name wapp3 a0z9/dock.wapp.0.5
+  464  docker run -d --name wapp3 a0z9/dock:wapp.0.5
+  465  docker ps
+  466  docker inspect wapp3
+  467  docker exec bbox5 ping wapp3
+  468  docker exec bbox5 env
+  469  docker rm -f bbox5
+  470  docker run --name bbox5 -dit --link wapp3:webservice busybox
+  471  docker exec bbox5 ip a
+  472  docker exec bbox5 cat /etc/hosts
+  473  docker exec bbox5 env
+  474  docker attach bbox5
+  475  docker run --name bbox3 -dit --link wapp1:webservice busybox
+  476  docker run --name bbox6 -dit --link wapp1:webservice busybox
+  477  docker attach bbox6
+  478  docker network create --driver bridge net2
+  479  docker inspect net2
+  480  docker network ls
+  481  docker ps
+  482  docker stop $(docker ps -q)
+  483  ip a
+  484  docker start wapp1
+  485  ip a
+  486  docker exec wapp1 ip a
+  487  docker network disconnect bridge wapp1
+  488  ip a
+  489  docker exec wapp1 ip a
+  490  docker network connect net2 wapp1
+  491  docker exec wapp1 ip a
+  492  docker exec wapp1 ipng 172.18.0.1
+  493  docker exec wapp1 ping 172.18.0.1
+  494  docker exec wapp1 ping 172.17.0.1
+  495  docker attach -i wapp1 
+  496  docker exec wapp1 cat /etc/hosts
+  497  docker exec wapp1 ip a
+  498  docker restart wapp1
+  499  docker exec wapp1 cat /etc/hosts
+  500  docker exec wapp1 cat /etc/resolv.conf
+  501  docker run --name bbox-net2 --network net2 -dit busybox
+  502  docker network inspect net2 
+  503  docker exec wapp1 ping bbox-net2
+  504  docker exec bbox-net2 ping wapp1
+  505  docker exec bbox-net2 cat /etc/hosts
+  506  docker exec bbox-net2 ping bbox-net2 
+  507  docker run --name bbox-net2-1 --hostname bb2  --network net2 -dit busybox
+  508  docker exec bbox-net2-1 ping bbox-net2 
+  509  docker exec bbox-net2-1 cat /etc/hosts
+  510  docker run --name bbox-net2-2 --hostname bb2 --hostname bb2-1  --network net2 -dit busybox
+  511  docker exec bbox-net2-2 cat /etc/hosts
+  512  docker exec bbox-net2-2 ping bb2-1
+  513  docker exec bbox-net2-2 ping bb2
+  514  docker restart bbox-net2-2
+  515  docker exec wapp1 ping bb2
+  516  docker exec wapp1 ping bb2-1
+  517  docker exec bbox-net2-2 ip a
+  518  docker ps
+  519  docker network inspect net2
+  520  docker network create net3 --subnet 192.168.201.0/24 --gateway 192.168.201.254
+  521  docker network disconnect net2 $(docker ps -q)
+  522  for i in $(docker ps -q); do  docker network disconnect net2 i; done
+  523  for i in $(docker ps -q); do  docker network disconnect net2 $i; done
+  524  docker network inspect net2
+  525  docker restart $(docker ps -q)
+  526  for i in $(docker ps -q); do  docker network connect net3 $i; done
+  527  docker network inspect net3
+  528  docker inspect bbox-net2-1
+  529  docker inspect bbox-net2-1 | grep host
+  530  docker inspect bbox-net2-1 | grep alias
+  531  docker inspect bbox-net2-1 | grep ali
+  532  docker inspect bbox-net2-1
+  533  docker exec wapp1 bing  bbox-net2-1
+  534  docker exec wapp1 ping  bbox-net2-1
+  535  docker exec wapp1 ping bb2
+  536  docker network create net4 --subnet 192.168.211.0/24 --gateway 192.168.211.254 --ipv6 false
+  537  docker network create --subnet 192.168.211.0/24 --gateway 192.168.211.254 --ipv6 false net4
+  538  docker network create --subnet 192.168.211.0/24 --gateway 192.168.211.254 --ipv6=false net4
+  539  docker network inspect net4
+  540  docker search registry
+  541  docker run -d -p 5000:5000 --name registry registry:2
+  542  dock images
+  543  docker images
+  544  docker tag 755 dock01:5000/bbox:0.1
+  545  docker push dock01:5000/bbox:0.1 
+  546  curl dock01:5000/v2/_catalog
+  547  curl dock01:5000/v2/bbox/tags/list
+  548  docker rmi 7707
+  549  docker rmi 7707 -f
+  550  docker images
+  551  docker rmi 755 -f
+  552  docker images 
+  553  docker ps -a
+  554  for i in {1,6}; do docker rm -f bbox$i; done
+  555  for i in {1..6}; do docker rm -f bbox$i; done
+  556  docker ps -a
+  557  docker rm -f 92 41 d7
+  558  docker ps -a
+  559  docker rm -f 79 5e
+  560  docker ps -a
+  561  docker rm -f 30
+  562  docker ps -a
+  563  docker rm -f wapp2
+  564  docker ps -a
+  565  docker network ls
+  566  docker network prune -f
+  567  docker image ls
+  568  docker image prune -f
+  569  docker image ls
+  570  docker image prune 
+  571  docker image ls
+  572  docker ps -a
+  573  docker ps
+  574  docker run --name bbox1 -dit dock01:5000/bbox:0.1
+  575  docker image ls
+  576  curl dock01:5000/v2/bbox/tags/list
+  577  curl dock01:5000/v2/_catalog
+  578  docker tag a0z9/dock:wapp.0.5 dock01:5000/wapp:0.5
+  579  docker push dock01:5000/wapp:0.5 
+  580  curl dock01:5000/v2/_catalog
+  581  docker images
+  582  docker rmi f4a -f
+  583  docker images
+  584  docker run -d --name wapp2 -p 8081:8080 dock01:5000/wapp:0.5
+  585  docker run -d --name wapp21 -p 8082:8080 dock01:5000/wapp
+  586  sudo nano /etc/hosts
+  587  sudo cat /etc/hosts
+  588  history > history/history_day4_1
