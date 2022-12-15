@@ -1,0 +1,17 @@
+FROM nodejscn/node
+
+LABEL MAINTAINER=a0z9@rambler.ru
+
+WORKDIR /var/www/wapp
+
+ENV VERSION 1.0
+ENV DATA aaa bbb ccc
+
+COPY wapp.js .
+
+EXPOSE 8080
+
+ENTRYPOINT ["node", "wapp.js"]
+
+
+
