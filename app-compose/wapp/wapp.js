@@ -32,7 +32,7 @@ var handler = function(request, response) {
      </head>
      <body>
      <h1>Hello, Andrei!</h1>
-   <h1>Welcome to docker host: ${dock_host}</h1>
+   <h1>Welcome to docker host: ${dock_host} !!!</h1>
      <h2>Container id: ${host_name}</h2>
      <h2>Container ip: ${host_ip}</h2>
      <div style="color:green;">
