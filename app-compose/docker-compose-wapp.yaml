@@ -1,19 +1,19 @@
 version: "3.9"
 
 services:
-  gst1:
-    image: docker/getting-started
-    ports:
-      - "8081:80"
+  bbox1:
+    image: busybox
     
     volumes:
       - "vol2:/s1"
-      - "/s2"
    
     environment:
-      - PROD
       - VERSION=1.0
       - DOCK_HOST=dock01
+    depends_on:
+      wapp1:
+        condition: service_healthy
+
 
   wapp1:
     build: ./wapp
@@ -24,6 +24,12 @@ services:
     
     volumes:
       - "wapp_vol:/var/log/wapp"
+    healthcheck:
+      test: wget -q --spider localhost:8080
+      interval: 4s
+      timeout: 3s
+      retries: 3
+
 
 networks:
   net2:

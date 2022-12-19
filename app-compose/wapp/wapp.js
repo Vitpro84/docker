@@ -22,7 +22,7 @@ var handler = function(request, response) {
   console.log(dt +  "--> request from: " + addr + " to host: " +host_name);
   const dock_host = process.env.DOCK_HOST;
 
-  const content = `${dock_host} --> request ${addr} to ${host_name}.\n`;	
+  const content = `${dt} --> ${dock_host} --> request ${addr} to ${host_name}.\n`;	
   fs.writeFile(`${log_dir}/wapp.log`, content, {flag: 'a+'}, err => {});
 
   var body = 
