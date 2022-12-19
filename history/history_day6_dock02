@@ -1,0 +1,49 @@
+    1  reboot
+    2  hostname
+    3  poweroff
+    4  ip a
+    5  ping ya.ru
+    6  poweroff
+    7  sudo nano /etc/hosts
+    8  cat /etc/hosts
+    9  ping dock01
+   10  reboot
+   11  git
+   12  git clone https://github.com/a0z9/docker
+   13  sudo apt update
+   14  ./docker/scripts/install-docker
+   15  ping dock01
+   16  ping dock03
+   17  docker ps
+   18  id
+   19  docker pull dock01:5000/wapp:0.5
+   20  docker pull https://dock01:5000/wapp:0.5
+   21  sudo apt install ssh
+   22  cd docker/
+   23  ls -la
+   24  sudo mkdir -p /etc/docker/certs.d/dock01:5001
+   25  sudo cp ca.crt /etc/docker/certs.d/dock01\:5001/
+   26  docker images
+   27  docker pull dock01:5001/wapp:0.5
+   28  sudo mkdir -p /etc/docker/certs.d/dock01:5002
+   29  sudo cp ca.crt /etc/docker/certs.d/dock01\:5002/
+   30  docker pull dock01:5002/wapp:0.5
+   31  docker login dock01:5002
+   32  docker pull dock01:5002/wapp:0.5
+   33  docker pull busybox
+   34  docker tag busybox:latest dock01:5002/bbox:latest
+   35  docker push dock01:5002/bbox:latest 
+   36  docker swarm join --token SWMTKN-1-5vqj0bn0tgoikae0fp9nb72wh96x39rhde6femn286nk1h3lli-1cxn13x4gv10t3gm484oerar1 192.168.56.11:2377
+   37  docker ps
+   38  docker node ls
+   39  docker ps
+   40  docker node ls
+   41  docker node promote dock03 
+   42  docker node ls
+   43  docker swarm leave --force
+   44  docker node ls
+   45  history > history/history_day6_dock01
+   46  git pull
+   47  git add .
+   48  git commit -am 'end of day 6'
+   49  history > history/history_day6_dock02
